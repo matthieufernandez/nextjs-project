@@ -1,13 +1,11 @@
-"use client"
-
 import { useEffect } from "react";
 
-export default function Page() {
+export default async function Page() {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    
-    // await new Promise((resolve) => setTimeout(resolve, 1000));
+    // throw Error("Whatever!");
 
-    useEffect(() => {console.log("you used a useEffect hook")}, [])
+    // useEffect(() => {console.log("you used a useEffect hook")}, [])
 
     return <div>Hello world</div>
 }
